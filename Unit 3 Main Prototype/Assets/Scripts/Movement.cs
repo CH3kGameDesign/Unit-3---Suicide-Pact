@@ -120,7 +120,6 @@ public class Movement : MonoBehaviour {
 			//Jump
 			if (Input.GetKey (KeyCode.Space) && isGrounded) {
 				gameObject.GetComponent<Rigidbody> ().velocity = new Vector3 (gameObject.GetComponent<Rigidbody>().velocity.x, jumpForce, gameObject.GetComponent<Rigidbody>().velocity.z);
-
 			}
 			if (Input.GetKey (KeyCode.JoystickButton0) && isGrounded) {
 				gameObject.GetComponent<Rigidbody> ().velocity = new Vector3 (gameObject.GetComponent<Rigidbody>().velocity.x, jumpForce, gameObject.GetComponent<Rigidbody>().velocity.z);

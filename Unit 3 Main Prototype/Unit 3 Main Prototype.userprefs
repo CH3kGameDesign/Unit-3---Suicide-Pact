@@ -1,9 +1,11 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Movement.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\CharacterSelect.cs">
     <Files>
-      <File FileName="Assets\Scripts\Movement.cs" Line="139" Column="2" />
+      <File FileName="Assets\Scripts\LevelEnd.cs" Line="11" Column="58" />
+      <File FileName="Assets\Scripts\Movement.cs" Line="28" Column="40" />
       <File FileName="Assets\Scripts\CauseOfDeath.cs" Line="21" Column="10" />
+      <File FileName="Assets\Scripts\CharacterSelect.cs" Line="190" Column="35" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

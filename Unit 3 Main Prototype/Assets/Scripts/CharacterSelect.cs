@@ -8,6 +8,8 @@ public class CharacterSelect : MonoBehaviour {
 	public Text charSelectText;
 	public Image deadBG;
 	public Text deadText;
+	public Text controlsPC;
+	public Text controlsXBOX;
 
 	public GameObject player1;
 	public GameObject player2;
@@ -26,7 +28,9 @@ public class CharacterSelect : MonoBehaviour {
 
 	public float charselect = 1;
 
-	/////////////////////////////////////
+	public bool xboxController;
+
+	//---------------------------------------------------------------------
 
 	// Ensure Starting Variables Are Correct
 	void Start () {
@@ -41,9 +45,11 @@ public class CharacterSelect : MonoBehaviour {
 		player3cam.SetActive(false);
 		player4cam.SetActive(false);
 
+		controlsPC.enabled = true;
+		controlsXBOX.enabled = false;
 	}
 
-	/////////////////////////////////////
+	//---------------------------------------------------------------------
 
 	// Update is called once per frame
 	void Update () {
@@ -74,7 +80,7 @@ public class CharacterSelect : MonoBehaviour {
 			changecharacter ();
 		}
 
-		/////////////////////////////////////
+		//---------------------------------------------------------------------
 
 		//Dead Text
 		if (charselect == 1) {
@@ -129,10 +135,75 @@ public class CharacterSelect : MonoBehaviour {
 
 			}
 		}
+		//Check What Controls were used
+		if (Input.GetKeyDown (KeyCode.Space)) {
+			xboxController = false;
+		}
+		if (Input.GetKeyDown (KeyCode.W)) {
+			xboxController = false;
+		}
+		if (Input.GetKeyDown (KeyCode.A)) {
+			xboxController = false;
+		}
+		if (Input.GetKeyDown (KeyCode.S)) {
+			xboxController = false;
+		}
+		if (Input.GetKeyDown (KeyCode.D)) {
+			xboxController = false;
+		}
+		if (Input.GetKeyDown (KeyCode.R)) {
+			xboxController = false;
+		}
+		if (Input.GetKeyDown (KeyCode.Q)) {
+			xboxController = false;
+		}
+		if (Input.GetAxis ("MouseXCheck") != 0) {
+			xboxController = false;
+		}
+		if (Input.GetKeyDown (KeyCode.JoystickButton0)) {
+			xboxController = true;
+		}
+		if (Input.GetKeyDown (KeyCode.JoystickButton1)) {
+			xboxController = true;
+		}
+		if (Input.GetKeyDown (KeyCode.JoystickButton2)) {
+			xboxController = true;
+		}
+		if (Input.GetKeyDown (KeyCode.JoystickButton3)) {
+			xboxController = true;
+		}
+		if (Input.GetKeyDown (KeyCode.JoystickButton4)) {
+			xboxController = true;
+		}
+		if (Input.GetKeyDown (KeyCode.JoystickButton5)) {
+			xboxController = true;
+		}
+		if (Input.GetAxis ("ControllerHorizontalCheck") != 0) {
+			xboxController = true;
+		}
+		if (Input.GetAxis ("ControllerVerticalCheck") != 0) {
+			xboxController = true;
+		}
+		if (Input.GetAxis ("ControllerRXCheck") != 0) {
+			xboxController = true;
+		}
+		if (Input.GetAxis ("ControllerRYCheck") != 0) {
+			xboxController = true;
+		}
+
+
+		//Display Controls
+		if (xboxController) {
+			controlsPC.enabled = false;
+			controlsXBOX.enabled = true;
+		} else {
+			controlsPC.enabled = true;
+			controlsXBOX.enabled = false;
+		}
 
 	}
 
-	/// //////////////////////////////////////////////
+	//---------------------------------------------------------------------
 
 	void changecharacter () {
 		if (charselect == 1) {
