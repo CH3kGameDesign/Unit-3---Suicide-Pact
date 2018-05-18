@@ -10,7 +10,7 @@ public class CauseOfDeath : MonoBehaviour {
 
 	//////////////////////////////////////////
 	// What Death Does
-	void Death () {
+	public void Death () {
 		if (GetComponent<Movement> ().notdead) {
 			//Enable Ragdoll-esque motion
 			playerModel.transform.up = cameraCorrection.transform.forward;
@@ -22,9 +22,9 @@ public class CauseOfDeath : MonoBehaviour {
 	}
 
 	//////////////////////////////////////////
-	void OnCollisionEnter (Collision col) {
+	void OnTriggerEnter (Collider col) {
 		if (GetComponent<Movement> ().notdead == true) {
-			// Death By Drowning
+			 //Death By Drowning
 			if (col.gameObject.name == "Waste") {
 				Death ();
 			}

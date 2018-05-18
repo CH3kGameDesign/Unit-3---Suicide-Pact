@@ -16,7 +16,7 @@ public class LevelEnd : MonoBehaviour {
 		levelFinished = false;
 	}
 
-	void OnCollisionEnter() {
+	void OnTriggerEnter() {
 		FINISH.text = "YOU COMPLETED THAT ARBITRARY TASK!!";
 		finishButton.text = "Respawn To Continue";
 		levelFinished = true;
