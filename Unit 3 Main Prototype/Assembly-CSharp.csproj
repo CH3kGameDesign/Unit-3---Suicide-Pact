@@ -60,6 +60,9 @@
      <Compile Include="Assets\Scripts\Movement.cs" />
      <Compile Include="Assets\Scripts\MovementOrientation.cs" />
      <Compile Include="Assets\Scripts\PlayerSpawn.cs" />
+     <Compile Include="Assets\Scripts\Rope\BezierCurve.cs" />
+     <Compile Include="Assets\Scripts\Rope\Hook.cs" />
+     <Compile Include="Assets\Scripts\Rope\Rope.cs" />
      <Compile Include="Assets\Third Party Assets\OBJExport\OBJExporter.cs" />
      <Compile Include="Assets\Third Party Assets\ProCore\ProBuilder\API Examples\Icosphere FFT\Scripts\CameraControls.cs" />
      <Compile Include="Assets\Third Party Assets\ProCore\ProBuilder\API Examples\Icosphere FFT\Scripts\IcoBumpin.cs" />

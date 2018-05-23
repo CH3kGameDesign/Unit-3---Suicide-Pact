@@ -28,6 +28,20 @@ public class CauseOfDeath : MonoBehaviour {
 			if (col.gameObject.name == "Waste") {
 				Death ();
 			}
+
+			if (col.gameObject.name == "Hook") {
+				col.gameObject.GetComponent<Rigidbody> ().AddForce (transform.forward * 20);
+				Death ();
+			}
+
+		}
+	}
+	//////////////////////////////////////////
+	void OnTriggerStay (Collider col) {
+		if (col.gameObject.name == "Hook") {
+			transform.position = col.gameObject.transform.position;
+			GetComponent<Rigidbody> ().velocity = Vector3.zero;
+			GetComponent<Rigidbody> ().freezeRotation = true;
 		}
 	}
 
