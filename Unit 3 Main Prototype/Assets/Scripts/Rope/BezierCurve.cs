@@ -34,9 +34,6 @@ public class BezierCurve : MonoBehaviour {
     //The De Casteljau's Algorithm
     static Vector3 DeCasteljausAlgorithm(Vector3 A, Vector3 B, Vector3 C, Vector3 D, float t)
     {
-        //Linear interpolation = lerp = (1 - t) * A + t * B
-        //Could use Vector3.Lerp(A, B, t)
-
         //To make it faster
         float oneMinusT = 1f - t;
 

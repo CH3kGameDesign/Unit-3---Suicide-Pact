@@ -29,8 +29,8 @@ public class CauseOfDeath : MonoBehaviour {
 				Death ();
 			}
 
-			if (col.gameObject.name == "Hook") {
-				col.gameObject.GetComponent<Rigidbody> ().AddForce (transform.forward * 20);
+			if (col.gameObject.name == "HookPlayerPos") {
+				col.gameObject.GetComponentInParent<Rigidbody>().AddForce (transform.forward * 20);
 				Death ();
 			}
 
@@ -38,7 +38,7 @@ public class CauseOfDeath : MonoBehaviour {
 	}
 	//////////////////////////////////////////
 	void OnTriggerStay (Collider col) {
-		if (col.gameObject.name == "Hook") {
+		if (col.gameObject.name == "HookPlayerPos") {
 			transform.position = col.gameObject.transform.position;
 			GetComponent<Rigidbody> ().velocity = Vector3.zero;
 			GetComponent<Rigidbody> ().freezeRotation = true;
