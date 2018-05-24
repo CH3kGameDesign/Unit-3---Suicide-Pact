@@ -21,11 +21,6 @@ public class CharacterSelect : MonoBehaviour {
 	public GameObject player3cam;
 	public GameObject player4cam;
 
-	public GameObject player1model;
-	public GameObject player2model;
-	public GameObject player3model;
-	public GameObject player4model;
-
 	public float charselect = 1;
 
 	public bool xboxController;

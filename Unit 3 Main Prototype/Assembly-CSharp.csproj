@@ -55,6 +55,8 @@
      <Compile Include="Assets\Scripts\CameraController.cs" />
      <Compile Include="Assets\Scripts\CauseOfDeath.cs" />
      <Compile Include="Assets\Scripts\CharacterSelect.cs" />
+     <Compile Include="Assets\Scripts\DressUpParty.cs" />
+     <Compile Include="Assets\Scripts\FaceDirection.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\LaunchPad.cs" />
      <Compile Include="Assets\Scripts\LevelEnd.cs" />

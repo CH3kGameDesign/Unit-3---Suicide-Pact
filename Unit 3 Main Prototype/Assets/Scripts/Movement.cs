@@ -126,13 +126,17 @@ public class Movement : MonoBehaviour {
 			}
 		}
 
-			//Respawn
-			if (Input.GetKeyDown (KeyCode.R)) {
+				
+	}
+
+	void Update () {
+		//Respawn
+		if (Input.GetKeyDown (KeyCode.R)) {
 			RespawnAction ();
-			}
-			if (Input.GetKeyDown (KeyCode.JoystickButton3)) {
+		}
+		if (Input.GetKeyDown (KeyCode.JoystickButton3)) {
 			RespawnAction ();
-			}		
+		}	
 	}
 
 
@@ -142,6 +146,7 @@ public class Movement : MonoBehaviour {
 		notdead = true;
 		//gameObject.SetActive (false);
 		GetComponent<Rigidbody> ().velocity = Vector3.zero;
+		GetComponentInParent<DressUpParty> ().HatReset ();
 
 
 		//Disable Ragdoll-esque motion
