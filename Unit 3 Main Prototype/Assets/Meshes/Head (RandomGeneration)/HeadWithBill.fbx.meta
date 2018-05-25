@@ -6,14 +6,25 @@ ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
+    100002: Head-With-Bill
+    100004: Model4
     400000: //RootNode
+    400002: Head-With-Bill
+    400004: Model4
     2100000: 01 - Default
     2100002: 02 - Default
     2100004: 03 - Default
     2100006: Hat
+    2100008: lambert1
     2300000: //RootNode
+    2300002: Head-With-Bill
+    2300004: Model4
     3300000: //RootNode
+    3300002: Head-With-Bill
+    3300004: Model4
     4300000: Head-With-Bill
+    4300002: Model4
+    4300004: Model9
     9500000: //RootNode
   externalObjects: {}
   materials:

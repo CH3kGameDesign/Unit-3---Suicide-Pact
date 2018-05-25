@@ -40,6 +40,7 @@ GameObject:
   - component: {fileID: 95640697316371716}
   - component: {fileID: 183744639181812874}
   - component: {fileID: 137148859583852004}
+  - component: {fileID: 64355742855749694}
   m_Layer: 0
   m_Name: Flag
   m_TagString: Untagged
@@ -74,15 +75,15 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1074189585142144}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.5, y: -6, z: 33.5}
+  m_LocalRotation: {x: -0, y: -0.70710677, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -20.45, y: 6, z: 8.95}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4924353099285362}
   - {fileID: 4643374357044804}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90.00001, z: 0}
 --- !u!4 &4643374357044804
 Transform:
   m_ObjectHideFlags: 1
@@ -157,6 +158,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1306902121718910}
   m_Mesh: {fileID: 4300000, guid: ab95448db7d62de4cbeced5bd15b844f, type: 3}
+--- !u!64 &64355742855749694
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1306902121718910}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: ab95448db7d62de4cbeced5bd15b844f, type: 3}
 --- !u!64 &64663442332764880
 MeshCollider:
   m_ObjectHideFlags: 1
@@ -178,7 +193,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1074189585142144}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 2.5, z: 1}
@@ -3089,10 +3104,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.1
+  m_Radius: 0.25
   m_Height: 2.5001
   m_Direction: 1
-  m_Center: {x: 0, y: 1.25005, z: 0}
+  m_Center: {x: 0, y: 1.25005, z: -0.000000007450581}
 --- !u!137 &137148859583852004
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
@@ -3136,8 +3151,8 @@ SkinnedMeshRenderer:
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 0}
   m_AABB:
-    m_Center: {x: 0, y: 0.5, z: 0.00000011920929}
-    m_Extent: {x: 0.02500159, y: 0.375, z: 0.50000024}
+    m_Center: {x: 0, y: 0.5000005, z: 0}
+    m_Extent: {x: 0.024999712, y: 0.375, z: 0.50000006}
   m_DirtyAABB: 0
 --- !u!183 &183744639181812874
 Cloth:
@@ -4317,8 +4332,7 @@ Cloth:
     collisionSphereDistance: 3.4028235e+38
   - maxDistance: 3.4028235e+38
     collisionSphereDistance: 3.4028235e+38
-  m_CapsuleColliders:
-  - {fileID: 136028264791225126}
+  m_CapsuleColliders: []
   m_SphereColliders: []
   m_SelfCollisionDistance: 0
   m_SelfCollisionStiffness: 1

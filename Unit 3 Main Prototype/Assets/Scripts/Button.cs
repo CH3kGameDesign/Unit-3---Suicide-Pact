@@ -7,6 +7,7 @@ public class Button : MonoBehaviour {
 	public GameObject door;
 	public GameObject launchPad;
 	public GameObject powerLine;
+	public GameObject movingPlatform;
 	public Material powerOff;
 	public Material powerOn;
 
@@ -18,6 +19,9 @@ public class Button : MonoBehaviour {
 	void OnCollisionEnter() {
 		if (launchPad) {
 			launchPad.GetComponent<LaunchPad> ().launch = true;
+		}
+		if (movingPlatform) {
+			movingPlatform.GetComponent<MovingPlatform> ().move = true;
 		}
 	}
 

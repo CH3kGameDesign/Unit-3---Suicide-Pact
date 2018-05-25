@@ -6,12 +6,24 @@ ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
+    100002: Model
+    100004: pCylinder1
     400000: //RootNode
+    400002: Model
+    400004: pCylinder1
     2100000: lambert1
     2100002: blinn3
+    2100004: blinn4
     2300000: //RootNode
+    2300002: Model
+    2300004: pCylinder1
     3300000: //RootNode
+    3300002: Model
+    3300004: pCylinder1
     4300000: pCylinder1
+    4300002: Model
+    4300004: Model5
+    4300006: pSphere5
     9500000: //RootNode
   externalObjects: {}
   materials:

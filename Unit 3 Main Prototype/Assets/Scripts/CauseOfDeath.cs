@@ -8,6 +8,8 @@ public class CauseOfDeath : MonoBehaviour {
 	public GameObject playerModel;
 	public GameObject cameraCorrection;
 
+	private Vector3 spikeDeathPos;
+
 	//////////////////////////////////////////
 	// What Death Does
 	public void Death () {
@@ -23,23 +25,33 @@ public class CauseOfDeath : MonoBehaviour {
 
 	//////////////////////////////////////////
 	void OnTriggerEnter (Collider col) {
-		if (GetComponent<Movement> ().notdead == true) {
+		//if (GetComponent<Movement> ().notdead == true) {
 			 //Death By Drowning
 			if (col.gameObject.name == "Waste") {
 				Death ();
 			}
 
 			if (col.gameObject.name == "HookPlayerPos") {
-				col.gameObject.GetComponentInParent<Rigidbody>().AddForce (transform.forward * 20);
+				col.gameObject.GetComponentInParent<Rigidbody>().AddForce (transform.forward * 10);
 				Death ();
 			}
 
-		}
+			if (col.gameObject.name == "SpikeWall") {
+				spikeDeathPos = transform.position;
+				Death ();
+			}
+
+		//}
 	}
 	//////////////////////////////////////////
 	void OnTriggerStay (Collider col) {
 		if (col.gameObject.name == "HookPlayerPos") {
 			transform.position = col.gameObject.transform.position;
+			GetComponent<Rigidbody> ().velocity = Vector3.zero;
+			GetComponent<Rigidbody> ().freezeRotation = true;
+		}
+		if (col.gameObject.name == "SpikeWall") {
+			transform.position = spikeDeathPos;
 			GetComponent<Rigidbody> ().velocity = Vector3.zero;
 			GetComponent<Rigidbody> ().freezeRotation = true;
 		}
