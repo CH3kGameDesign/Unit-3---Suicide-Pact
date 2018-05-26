@@ -72,6 +72,7 @@ GameObject:
   - component: {fileID: 124860869623756088}
   - component: {fileID: 81368398270809578}
   - component: {fileID: 54728522958291624}
+  - component: {fileID: 114179791027762140}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -112,6 +113,7 @@ GameObject:
   - component: {fileID: 124062666677746884}
   - component: {fileID: 81180733491093310}
   - component: {fileID: 54675425108904090}
+  - component: {fileID: 114295912302778612}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -230,6 +232,7 @@ GameObject:
   - component: {fileID: 124216594036309286}
   - component: {fileID: 81936936540932788}
   - component: {fileID: 54853803737424906}
+  - component: {fileID: 114180175105474124}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -361,6 +364,7 @@ GameObject:
   - component: {fileID: 124096532861272628}
   - component: {fileID: 81985247814747046}
   - component: {fileID: 54271083171699066}
+  - component: {fileID: 114138025605583178}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -893,7 +897,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1822873612535712}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 6, z: 0}
+  m_LocalPosition: {x: 0, y: 9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4998221715300224}
@@ -2129,6 +2133,18 @@ MonoBehaviour:
   yreset: {fileID: 0}
   playerModel: {fileID: 1146912504687356}
   cameraCorrection: {fileID: 1612824419218322}
+--- !u!114 &114138025605583178
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1513832124684264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  profile: {fileID: 11400000, guid: d0630b0c499098b4295d016e1da76e53, type: 2}
 --- !u!114 &114160664378645452
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4177,6 +4193,30 @@ MonoBehaviour:
   m_selectedFaces: 
   m_SelectedEdges: []
   m_selectedTriangles: 
+--- !u!114 &114179791027762140
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1091635775848380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  profile: {fileID: 11400000, guid: d0630b0c499098b4295d016e1da76e53, type: 2}
+--- !u!114 &114180175105474124
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1425029944410326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  profile: {fileID: 11400000, guid: d0630b0c499098b4295d016e1da76e53, type: 2}
 --- !u!114 &114199459369020116
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6312,6 +6352,18 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+--- !u!114 &114295912302778612
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1157676055546714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  profile: {fileID: 11400000, guid: d0630b0c499098b4295d016e1da76e53, type: 2}
 --- !u!114 &114301257835444302
 MonoBehaviour:
   m_ObjectHideFlags: 1

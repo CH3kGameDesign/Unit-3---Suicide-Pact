@@ -29,6 +29,19 @@ public class CharacterSelect : MonoBehaviour {
 
 	// Ensure Starting Variables Are Correct
 	void Start () {
+
+		player1.GetComponent<Movement> ().respawn = player1.transform.position;
+		player1.GetComponent<Movement> ().respawnRotation = player1.transform.rotation;
+
+		player2.GetComponent<Movement> ().respawn = player2.transform.position;
+		player2.GetComponent<Movement> ().respawnRotation = player2.transform.rotation;
+
+		player3.GetComponent<Movement> ().respawn = player3.transform.position;
+		player3.GetComponent<Movement> ().respawnRotation = player3.transform.rotation;
+
+		player4.GetComponent<Movement> ().respawn = player4.transform.position;
+		player4.GetComponent<Movement> ().respawnRotation = player4.transform.rotation;
+
 		charSelectText.text = "Player 1";
 		player1.GetComponent<Movement>().enabled = true;
 		player2.GetComponent<Movement>().enabled = false;

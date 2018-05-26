@@ -17,15 +17,13 @@ public class Movement : MonoBehaviour {
 
 	public Rigidbody rb;
 
-	private Vector3 respawn;
-	private Quaternion respawnRotation;
+	public Vector3 respawn;
+	public Quaternion respawnRotation;
 
 	private bool isGrounded;
 
 	// Use this for initialization
 	void Start () {
-		respawn = transform.position;
-		respawnRotation = transform.rotation;
 		rb = GetComponent<Rigidbody> ();
 	}
 
