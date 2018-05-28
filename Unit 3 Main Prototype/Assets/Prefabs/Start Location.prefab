@@ -2024,6 +2024,8 @@ MonoBehaviour:
   playerModel: {fileID: 1146912504687356}
   notdead: 1
   rb: {fileID: 54411850381494852}
+  respawn: {x: 0, y: 0, z: 0}
+  respawnRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &114061261112244344
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2139,7 +2141,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1513832124684264}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
   m_Name: 
@@ -4199,7 +4201,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1091635775848380}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
   m_Name: 
@@ -4211,7 +4213,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1425029944410326}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
   m_Name: 
@@ -6358,7 +6360,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1157676055546714}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
   m_Name: 
@@ -8599,6 +8601,8 @@ MonoBehaviour:
   playerModel: {fileID: 1887137623170246}
   notdead: 1
   rb: {fileID: 54607951449542274}
+  respawn: {x: 0, y: 0, z: 0}
+  respawnRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &114581686224945606
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8690,6 +8694,8 @@ MonoBehaviour:
   playerModel: {fileID: 1451025045862904}
   notdead: 1
   rb: {fileID: 54504636551405414}
+  respawn: {x: 0, y: 0, z: 0}
+  respawnRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &114637176603300148
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8853,6 +8859,8 @@ MonoBehaviour:
   playerModel: {fileID: 1444321250426194}
   notdead: 1
   rb: {fileID: 54995801117779170}
+  respawn: {x: 0, y: 0, z: 0}
+  respawnRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &114904155206343372
 MonoBehaviour:
   m_ObjectHideFlags: 1
