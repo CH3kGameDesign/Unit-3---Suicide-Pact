@@ -9,8 +9,12 @@ public class CameraController : MonoBehaviour {
 
 	public bool notdead = true;
 
-	private float yaw = 0;
-	private float pitch = 0;
+	//public so you can rotate player start rotation
+	public float yaw = 0;
+	public float pitch = 0;
+
+	private float pitchMax = 60;
+	private float pitchMin = -120;
 
 
 	// Use this for initialization
@@ -23,9 +27,16 @@ public class CameraController : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-			//Camera Movement
-			yaw += hcamspeed * Input.GetAxis ("Mouse X");
-			pitch -= vcamspeed * Input.GetAxis ("Mouse Y");
-			transform.eulerAngles = new Vector3 (pitch, yaw, 0.0f);
+		//Camera Movement
+		yaw += hcamspeed * Input.GetAxis ("Mouse X");
+		pitch -= vcamspeed * Input.GetAxis ("Mouse Y");
+
+		if (pitch > pitchMax) {
+			pitch = pitchMax;
+		}
+		if (pitch < pitchMin) {
+			pitch = pitchMin;
+		}
+		transform.eulerAngles = new Vector3 (pitch, yaw, 0.0f);
 	}
 }

@@ -46,11 +46,11 @@ public class DressUpParty : MonoBehaviour {
 		Player1Hat = Random.Range (0, hatList.Count);
 		if (Player1Hat == Player2Hat || Player1Hat == Player3Hat || Player1Hat == Player4Hat || Player1Hat == Player1HatPast) {
 			Player1HatSelect();
-			Player1HatPast = Player1Hat;
 		}
 		//GameObject Hat = Instantiate (hatList [Player1Hat], Player1.transform.position + new Vector3 (0, 0.8f, 0), transform.rotation) as GameObject;
 		//Hat.transform.SetParent (Player1.transform);
 
+		Player1HatPast = Player1Hat;
 		Player1.GetComponent<MeshFilter> ().sharedMesh = hatList [Player1Hat].GetComponent<MeshFilter>().sharedMesh;
 		Player1.GetComponent<MeshRenderer>().sharedMaterials = hatList [Player1Hat].GetComponent<MeshRenderer>().sharedMaterials;
 
@@ -60,11 +60,11 @@ public class DressUpParty : MonoBehaviour {
 		Player2Hat = Random.Range (0, hatList.Count);
 		if (Player2Hat == Player1Hat || Player2Hat == Player3Hat || Player2Hat == Player4Hat || Player2Hat == Player2HatPast) {
 			Player2HatSelect();
-			Player2HatPast = Player2Hat;
 		}
 		//GameObject Hat = Instantiate (hatList [Player2Hat], Player2.transform.position + new Vector3 (0, 0.8f, 0), transform.rotation) as GameObject;
 		//Hat.transform.SetParent (Player2.transform);
 
+		Player2HatPast = Player2Hat;
 		Player2.GetComponent<MeshFilter> ().sharedMesh = hatList [Player2Hat].GetComponent<MeshFilter>().sharedMesh;
 		Player2.GetComponent<MeshRenderer>().sharedMaterials = hatList [Player2Hat].GetComponent<MeshRenderer>().sharedMaterials;
 
@@ -74,11 +74,11 @@ public class DressUpParty : MonoBehaviour {
 		Player3Hat = Random.Range (0, hatList.Count);
 		if (Player3Hat == Player1Hat || Player3Hat == Player2Hat || Player3Hat == Player4Hat || Player3Hat == Player3HatPast) {
 			Player3HatSelect();
-			Player3HatPast = Player3Hat;
 		}
 		//GameObject Hat = Instantiate (hatList [Player3Hat], Player3.transform.position + new Vector3 (0, 0.8f, 0), transform.rotation) as GameObject;
 		//Hat.transform.SetParent (Player3.transform);
 
+		Player3HatPast = Player3Hat;
 		Player3.GetComponent<MeshFilter> ().sharedMesh = hatList [Player3Hat].GetComponent<MeshFilter>().sharedMesh;
 		Player3.GetComponent<MeshRenderer>().sharedMaterials = hatList [Player3Hat].GetComponent<MeshRenderer>().sharedMaterials;
 
@@ -88,11 +88,11 @@ public class DressUpParty : MonoBehaviour {
 		Player4Hat = Random.Range (0, hatList.Count);
 		if (Player4Hat == Player1Hat || Player4Hat == Player2Hat || Player4Hat == Player3Hat || Player4Hat == Player4HatPast) {
 			Player4HatSelect();
-			Player4HatPast = Player4Hat;
 		}
 		//GameObject Hat = Instantiate (hatList [Player4Hat], Player4.transform.position + new Vector3 (0, 0.8f, 0), transform.rotation) as GameObject;
 		//Hat.transform.SetParent (Player4.transform);
 
+		Player4HatPast = Player4Hat;
 		Player4.GetComponent<MeshFilter> ().sharedMesh = hatList [Player4Hat].GetComponent<MeshFilter>().sharedMesh;
 		Player4.GetComponent<MeshRenderer>().sharedMaterials = hatList [Player4Hat].GetComponent<MeshRenderer>().sharedMaterials;
 
