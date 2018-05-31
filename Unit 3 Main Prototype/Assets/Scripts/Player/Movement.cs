@@ -145,7 +145,8 @@ public class Movement : MonoBehaviour {
 		notdead = true;
 		//gameObject.SetActive (false);
 		GetComponent<Rigidbody> ().velocity = Vector3.zero;
-		GetComponentInParent<DressUpParty> ().HatReset ();
+        //Change Hats on Respawn
+		//GetComponentInParent<DressUpParty> ().HatReset ();
 
 
 		//Disable Ragdoll-esque motion

@@ -98,7 +98,6 @@ public class DressUpParty : MonoBehaviour {
 
 	}
 
-
 	public void HatReset() {
 		hatChange = GetComponent<CharacterSelect> ().charselect;
 		if (hatChange == 1) {
@@ -118,8 +117,4 @@ public class DressUpParty : MonoBehaviour {
 		}
 	}
 
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }
