@@ -20,6 +20,7 @@ public class CharacterSelect : MonoBehaviour {
 	public GameObject player2cam;
 	public GameObject player3cam;
 	public GameObject player4cam;
+	public GameObject menucam;
 
 	public float charselect = 1;
 
@@ -52,6 +53,7 @@ public class CharacterSelect : MonoBehaviour {
 		player2cam.SetActive(false);
 		player3cam.SetActive(false);
 		player4cam.SetActive(false);
+		menucam.SetActive(false);
 
 		controlsPC.enabled = true;
 		controlsXBOX.enabled = false;
@@ -213,7 +215,7 @@ public class CharacterSelect : MonoBehaviour {
 
 	//---------------------------------------------------------------------
 
-	void changecharacter () {
+	public void changecharacter () {
 		if (charselect == 1) {
 			charSelectText.text = "Player 1";
 			player1.GetComponent<Movement>().enabled = true;
@@ -225,6 +227,7 @@ public class CharacterSelect : MonoBehaviour {
 			player2cam.SetActive(false);
 			player3cam.SetActive(false);
 			player4cam.SetActive(false);
+			menucam.SetActive(false);
 		}
 		if (charselect == 2) {
 			charSelectText.text = "Player 2";
@@ -237,6 +240,7 @@ public class CharacterSelect : MonoBehaviour {
 			player2cam.SetActive(true);
 			player3cam.SetActive(false);
 			player4cam.SetActive(false);
+			menucam.SetActive(false);
 		}
 		if (charselect == 3) {
 			charSelectText.text = "Player 3";
@@ -249,6 +253,7 @@ public class CharacterSelect : MonoBehaviour {
 			player2cam.SetActive(false);
 			player3cam.SetActive(true);
 			player4cam.SetActive(false);
+			menucam.SetActive(false);
 		}
 		if (charselect == 4) {
 			charSelectText.text = "Player 4";
@@ -261,7 +266,21 @@ public class CharacterSelect : MonoBehaviour {
 			player2cam.SetActive(false);
 			player3cam.SetActive(false);
 			player4cam.SetActive(true);
+			menucam.SetActive(false);
 		}
 
+	}
+
+	public void disablecharacters () {
+		player1.GetComponent<Movement> ().enabled = false;
+		player2.GetComponent<Movement> ().enabled = false;
+		player3.GetComponent<Movement> ().enabled = false;
+		player4.GetComponent<Movement> ().enabled = false;
+
+		player1cam.SetActive(false);
+		player2cam.SetActive(false);
+		player3cam.SetActive(false);
+		player4cam.SetActive(false);
+		menucam.SetActive(true);
 	}
 }

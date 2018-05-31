@@ -8,6 +8,7 @@ public class Movement : MonoBehaviour {
 	public float jumpForce = 10;
 	public float speed = 2;
 	public float maxspeed = 2;
+	public GameObject players;
 	public GameObject cameraObject;
 	public GameObject playerModel;
 
@@ -134,7 +135,7 @@ public class Movement : MonoBehaviour {
 		}
 		if (Input.GetKeyDown (KeyCode.JoystickButton3)) {
 			RespawnAction ();
-		}	
+		}
 	}
 
 
@@ -152,4 +153,24 @@ public class Movement : MonoBehaviour {
 		transform.eulerAngles = Vector3.zero;
 		GetComponent<Rigidbody> ().constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
 	}
+
+	/*
+	//Trying to make Players move with Ground Beneath
+	void OnCollisionEnter (Collision other) {
+		transform.SetParent (other.gameObject.transform);
+	}
+	void OnCollisionExit () {
+		transform.SetParent (players.transform);
+	}
+	*/
+
+	/*
+	//Trying to make Players move with Ground Beneath
+	void OnCollisionStay (Collision obj) {
+		if (obj.gameObject.GetComponent<Rigidbody> ()) {
+			Debug.Log ("YEEEES");
+			GetComponent<Rigidbody> (). = obj.gameObject.GetComponent<Rigidbody> ().velocity;
+		}
+	}
+	*/
 }

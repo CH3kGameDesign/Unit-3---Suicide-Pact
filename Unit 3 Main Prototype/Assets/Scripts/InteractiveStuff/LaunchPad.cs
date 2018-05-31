@@ -13,7 +13,7 @@ public class LaunchPad : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		anim = GetComponent<Animator> ();
+		//anim = GetComponentInChildren<Animator> ();
 	}
 	
 	// Update is called once per frame
@@ -26,9 +26,6 @@ public class LaunchPad : MonoBehaviour {
 		}
 	}
 
-	void OnTriggerEnter() {
-		launchable = true;
-	}
 
 	void OnTriggerStay(Collider col) {
 		if (launch) {
@@ -38,6 +35,7 @@ public class LaunchPad : MonoBehaviour {
 			Debug.Log ("LUAUAUNCH");
 			launch = false;
 		}
+		launchable = true;
 	}
 
 	void OnTriggerExit() {

@@ -16,8 +16,6 @@ public class CameraController : MonoBehaviour {
 	private float pitchMax = 60;
 	private float pitchMin = -120;
 
-
-	// Use this for initialization
 	void Start () {
 		//Set Cursor to be locked to window
 		Cursor.lockState = CursorLockMode.Locked;
@@ -25,7 +23,6 @@ public class CameraController : MonoBehaviour {
 	}
 
 
-	// Update is called once per frame
 	void Update () {
 		//Camera Movement
 		yaw += hcamspeed * Input.GetAxis ("Mouse X");

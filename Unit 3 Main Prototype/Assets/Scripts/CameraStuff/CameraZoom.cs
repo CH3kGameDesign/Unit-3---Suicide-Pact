@@ -17,6 +17,8 @@ public class CameraZoom : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		
+
 		if (Physics.Raycast (transform.position, transform.forward, 2)) {
 			zoomIn = true;
 			Debug.Log ("hit surfae");
@@ -27,6 +29,14 @@ public class CameraZoom : MonoBehaviour {
 				}
 			}
 		}
+		/*
+		if (zoomCollide == true) {
+			zoomIn = true;
+			Debug.Log ("hit surfae");
+		} else {
+			zoomIn = false;
+		}
+		*/
 
 
 		if (zoomIn == true) {
@@ -60,5 +70,6 @@ public class CameraZoom : MonoBehaviour {
 		zoomCollide = false;
 		Debug.Log ("TriggerExit");
 	}
+
 
 }
