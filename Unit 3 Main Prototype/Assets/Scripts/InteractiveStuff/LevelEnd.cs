@@ -10,6 +10,7 @@ public class LevelEnd : MonoBehaviour {
 	public Text finishButton;				//TextObject That tells you What To Press
 	public bool levelFinished = false;		//Have you finished?
     public GameObject players;              //Players Controller GameObject
+    public GameObject fireworks;            //Legit Fireworks
 
     void Start () {
         //Start Variables
@@ -21,6 +22,7 @@ public class LevelEnd : MonoBehaviour {
     //Finish Level
     void OnTriggerEnter() {
 		FINISH.text = "YOU COMPLETED THAT ARBITRARY TASK!!";
+        Instantiate(fireworks, transform.position, Quaternion.Euler (-90,0,0));
         //Display which Controls to use
         if (players.GetComponent<CharacterSelect>().xboxController)
         {

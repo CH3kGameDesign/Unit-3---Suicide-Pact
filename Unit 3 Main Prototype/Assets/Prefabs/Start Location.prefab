@@ -2828,6 +2828,7 @@ MonoBehaviour:
   yreset: {fileID: 0}
   playerModel: {fileID: 1146912504687356}
   cameraCorrection: {fileID: 1612824419218322}
+  deathParticles: {fileID: 100010, guid: 031d08f52af1daa4f929b85221519426, type: 2}
   deadMaterial: {fileID: 2100000, guid: 787f7de4fedbe264fb6cc56079bedeac, type: 2}
 --- !u!114 &114137197788074052
 MonoBehaviour:
@@ -7106,7 +7107,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Camera: {fileID: 1768517464177310}
   shadow: {fileID: 1170110195245108}
-  notdead: 0
 --- !u!114 &114286509164811940
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7350,7 +7350,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Camera: {fileID: 1674233277402404}
   shadow: {fileID: 1799950030618122}
-  notdead: 0
 --- !u!114 &114422002336446940
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -9553,7 +9552,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Camera: {fileID: 1755919173254820}
   shadow: {fileID: 1421261662824716}
-  notdead: 0
 --- !u!114 &114597441829594940
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -9791,7 +9789,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Camera: {fileID: 1330646188840796}
   shadow: {fileID: 1330782211696146}
-  notdead: 0
 --- !u!114 &114694208118057016
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -9850,6 +9847,7 @@ MonoBehaviour:
   yreset: {fileID: 0}
   playerModel: {fileID: 1887137623170246}
   cameraCorrection: {fileID: 1779535207382208}
+  deathParticles: {fileID: 100010, guid: 031d08f52af1daa4f929b85221519426, type: 2}
   deadMaterial: {fileID: 2100000, guid: 787f7de4fedbe264fb6cc56079bedeac, type: 2}
 --- !u!114 &114846622488210094
 MonoBehaviour:
@@ -9887,6 +9885,7 @@ MonoBehaviour:
   yreset: {fileID: 0}
   playerModel: {fileID: 1444321250426194}
   cameraCorrection: {fileID: 1702914359232266}
+  deathParticles: {fileID: 100010, guid: 031d08f52af1daa4f929b85221519426, type: 2}
   deadMaterial: {fileID: 2100000, guid: 787f7de4fedbe264fb6cc56079bedeac, type: 2}
 --- !u!114 &114905401054905938
 MonoBehaviour:
@@ -12113,6 +12112,7 @@ MonoBehaviour:
   yreset: {fileID: 0}
   playerModel: {fileID: 1451025045862904}
   cameraCorrection: {fileID: 1251312050609914}
+  deathParticles: {fileID: 100010, guid: 031d08f52af1daa4f929b85221519426, type: 2}
   deadMaterial: {fileID: 2100000, guid: 787f7de4fedbe264fb6cc56079bedeac, type: 2}
 --- !u!114 &114994933566075694
 MonoBehaviour:

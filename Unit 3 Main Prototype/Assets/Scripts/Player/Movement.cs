@@ -160,7 +160,6 @@ public class Movement : MonoBehaviour {
 		transform.position = respawn;
 		transform.rotation = respawnRotation;
 		notdead = true;
-        GetComponentInChildren<FaceDirection>().notdead = true;
 
         GetComponent<Rigidbody> ().velocity = Vector3.zero;
         //Change Hats on Respawn

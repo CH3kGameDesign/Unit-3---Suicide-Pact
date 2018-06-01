@@ -413,6 +413,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Shaders\water.shader" />
+    <None Include="Assets\Third Party Assets\Particles\ParticleSystems\ParticleSystemsGuidelines.txt" />
+    <None Include="Assets\Third Party Assets\Particles\ParticleSystems\Shaders\PriorityParticleAdd.shader" />
+    <None Include="Assets\Third Party Assets\Particles\ParticleSystems\Shaders\PriorityParticleAddSoft.shader" />
+    <None Include="Assets\Third Party Assets\Particles\ParticleSystems\Shaders\PriorityParticleAlpha.shader" />
     <None Include="Assets\Third Party Assets\PostProcessing\Editor Resources\Monitors\HistogramCompute.compute" />
     <None Include="Assets\Third Party Assets\PostProcessing\Editor Resources\Monitors\HistogramRender.shader" />
     <None Include="Assets\Third Party Assets\PostProcessing\Editor Resources\Monitors\ParadeRender.shader" />

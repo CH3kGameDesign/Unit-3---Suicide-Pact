@@ -21,17 +21,17 @@ public class Hook : MonoBehaviour {
 		//Slow down Hook
 		if (notAttached == true) {
 			if (GetComponent<Rigidbody> ().velocity.x > 0.1f) {
-				velX = -0.02f;
+				velX = -0.03f;
 			} else {
 				velX = 0f;
 			}
 			if (GetComponent<Rigidbody> ().velocity.y > 0.1f) {
-				velY = -0.02f;
+				velY = -0.03f;
 			} else {
 				velY = 0f;
 			}
 			if (GetComponent<Rigidbody> ().velocity.z > 0.1f) {
-				velZ = -0.02f;
+				velZ = -0.03f;
 			} else {
 				velZ = 0f;
 			}
@@ -40,7 +40,7 @@ public class Hook : MonoBehaviour {
 		}
 	}
 
-	//Whether Somehow is Attached to the Hook
+	//Whether Something is Attached to the Hook
 	void OnTriggerEnter () {
 		notAttached = false;
 	}

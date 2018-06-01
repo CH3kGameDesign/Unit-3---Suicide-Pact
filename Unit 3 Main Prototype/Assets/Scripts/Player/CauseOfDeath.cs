@@ -7,6 +7,7 @@ public class CauseOfDeath : MonoBehaviour {
 	public GameObject yreset;                       //Lowest Point the Player Can Go
 	public GameObject playerModel;                  //Player Model
 	public GameObject cameraCorrection;             //CharCorrection
+    public GameObject deathParticles;               //BIG BOOM on Death
 
     public Material deadMaterial;                   //Dead Material
     private Material[] deadMaterials;               //List of Dead Materials
@@ -24,7 +25,9 @@ public class CauseOfDeath : MonoBehaviour {
 
             //Let the world know you're dead
 			GetComponent<Movement> ().notdead = false;
-            GetComponentInChildren<FaceDirection>().notdead = false;
+
+            //Big Boom
+            Instantiate(deathParticles, transform.position, Quaternion.Euler(0, 0, 0));
 
             //Make the Player Look Dead
             deadMaterials = GetComponentInChildren<MeshRenderer>().materials;
@@ -47,7 +50,7 @@ public class CauseOfDeath : MonoBehaviour {
 
             //Death By Hook
 			if (col.gameObject.name == "HookPlayerPos") {
-				col.gameObject.GetComponentInParent<Rigidbody>().AddForce (transform.forward * 10);
+				col.gameObject.GetComponentInParent<Rigidbody>().AddForce (cameraCorrection.transform.forward * 10);
 				Death ();
 			}
 

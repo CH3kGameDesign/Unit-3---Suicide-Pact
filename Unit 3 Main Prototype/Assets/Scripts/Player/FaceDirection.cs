@@ -7,15 +7,6 @@ public class FaceDirection : MonoBehaviour {
 	public GameObject Camera;       //Camera
     public GameObject shadow;       //Crash Bandicoot Shadow
 
-    public bool notdead;            //Whether Alive or Not
-
-    void Start()
-    {
-        //Start Variables
-        notdead = true;
-    }
-
-
     void Update () {
         //Face Out Camera Direction
 		if (GetComponentInParent<Movement> ().notdead) {
@@ -25,15 +16,19 @@ public class FaceDirection : MonoBehaviour {
         RaycastHit hit;
 
         //Shadows
-        if (notdead)
+        if (GetComponentInParent<Movement>().enabled == true)
         {
-            if (Physics.Raycast((transform.position + new Vector3(0, -0.01f, 0)), -transform.up, out hit, 100))
+            if (GetComponentInParent<Movement>().notdead == true)
             {
-                shadow.SetActive(true);
-                shadow.transform.position = new Vector3(transform.position.x, transform.position.y - hit.distance, transform.position.z);
-            } else
-            {
-                shadow.SetActive(false);
+                if (Physics.Raycast((transform.position + new Vector3(0, -0.01f, 0)), -transform.up, out hit, 100))
+                {
+                    shadow.SetActive(true);
+                    shadow.transform.position = new Vector3(transform.position.x, transform.position.y - hit.distance, transform.position.z);
+                }
+                else
+                {
+                    shadow.SetActive(false);
+                }
             }
         }
         else
