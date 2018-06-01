@@ -5,32 +5,32 @@ using UnityEngine.UI;
 
 public class CharacterSelect : MonoBehaviour {
 
-	public Text charSelectText;
-	public Image deadBG;
-	public Text deadText;
-	public Text controlsPC;
-	public Text controlsXBOX;
+	public Text charSelectText;                 //Selected Character Text
+	public Image deadBG;                        //Dead Text Background
+	public Text deadText;                       //Dead Text
+	public Text controlsPC;                     //PC Controls Text
+	public Text controlsXBOX;                   //Xbox Controls Text
 
-	public GameObject player1;
-	public GameObject player2;
-	public GameObject player3;
-	public GameObject player4;
+	public GameObject player1;                  //Self Explanatory
+	public GameObject player2;                  //Self Explanatory
+    public GameObject player3;                  //Self Explanatory
+    public GameObject player4;                  //Self Explanatory
 
-	public GameObject player1cam;
-	public GameObject player2cam;
-	public GameObject player3cam;
-	public GameObject player4cam;
-	public GameObject menucam;
+    public GameObject player1cam;               //Player 1 Camera Stuff
+    public GameObject player2cam;               //Player 2 Camera Stuff
+    public GameObject player3cam;               //Player 3 Camera Stuff
+    public GameObject player4cam;               //Player 4 Camera Stuff
+    public GameObject menucam;                  //In-Game Menu Camera
 
-	public float charselect = 1;
+    public float charselect = 1;                //Selected Character
 
-	public bool xboxController;
+	public bool xboxController;                 //Whether using Xbox Controller
 
 	//---------------------------------------------------------------------
 
 	// Ensure Starting Variables Are Correct
 	void Start () {
-
+        //Respawn Location and Rotations
 		player1.GetComponent<Movement> ().respawn = player1.transform.position;
 		player1.GetComponent<Movement> ().respawnRotation = player1.transform.rotation;
 
@@ -43,6 +43,7 @@ public class CharacterSelect : MonoBehaviour {
 		player4.GetComponent<Movement> ().respawn = player4.transform.position;
 		player4.GetComponent<Movement> ().respawnRotation = player4.transform.rotation;
 
+        //Start Variables
 		charSelectText.text = "Player 1";
 		player1.GetComponent<Movement>().enabled = true;
 		player2.GetComponent<Movement>().enabled = false;
@@ -81,6 +82,7 @@ public class CharacterSelect : MonoBehaviour {
 			changecharacter ();
 		}
 
+        //Ensure Characters Don't Exceed 4 or Reach 0
 		if (charselect > 4) {
 			charselect = 1;
 			changecharacter ();
@@ -216,6 +218,7 @@ public class CharacterSelect : MonoBehaviour {
 	//---------------------------------------------------------------------
 
 	public void changecharacter () {
+        //Select Character
 		if (charselect == 1) {
 			charSelectText.text = "Player 1";
 			player1.GetComponent<Movement>().enabled = true;
@@ -271,6 +274,7 @@ public class CharacterSelect : MonoBehaviour {
 
 	}
 
+    //Disable Characters    FOR MENU
 	public void disablecharacters () {
 		player1.GetComponent<Movement> ().enabled = false;
 		player2.GetComponent<Movement> ().enabled = false;

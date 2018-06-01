@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class CauseOfDeath : MonoBehaviour {
 
-	public GameObject yreset;
-	public GameObject playerModel;
-	public GameObject cameraCorrection;
+	public GameObject yreset;                       //Lowest Point the Player Can Go
+	public GameObject playerModel;                  //Player Model
+	public GameObject cameraCorrection;             //CharCorrection
 
-	private Vector3 spikeDeathPos;
+    public Material deadMaterial;                   //Dead Material
+    private Material[] deadMaterials;               //List of Dead Materials
+
+	private Vector3 spikeDeathPos;                  //Keep Player Attached To Spikes
 
 	//////////////////////////////////////////
 	// What Death Does
@@ -18,8 +21,19 @@ public class CauseOfDeath : MonoBehaviour {
 			playerModel.transform.up = cameraCorrection.transform.forward;
 			//playerModel.transform.eulerAngles = new Vector3 (90, 0, 0);
 			GetComponent<Rigidbody> ().freezeRotation = false;
+
+            //Let the world know you're dead
 			GetComponent<Movement> ().notdead = false;
-		}
+            GetComponentInChildren<FaceDirection>().notdead = false;
+
+            //Make the Player Look Dead
+            deadMaterials = GetComponentInChildren<MeshRenderer>().materials;
+            for (int i = 0; i < GetComponentInChildren<MeshRenderer>().materials.Length; i++)
+            {
+                deadMaterials[i] = deadMaterial;
+            }
+            GetComponentInChildren<MeshRenderer>().materials = deadMaterials;
+        }
 		return;
 	}
 
@@ -31,11 +45,13 @@ public class CauseOfDeath : MonoBehaviour {
 				Death ();
 			}
 
+            //Death By Hook
 			if (col.gameObject.name == "HookPlayerPos") {
 				col.gameObject.GetComponentInParent<Rigidbody>().AddForce (transform.forward * 10);
 				Death ();
 			}
 
+            //Death By Spikes
 			if (col.gameObject.name == "SpikeWall") {
 				spikeDeathPos = transform.position;
 				Death ();
@@ -45,12 +61,14 @@ public class CauseOfDeath : MonoBehaviour {
 	}
 	//////////////////////////////////////////
 	void OnTriggerStay (Collider col) {
+        //Stick To Hook
 		if (col.gameObject.name == "HookPlayerPos") {
 			transform.position = col.gameObject.transform.position;
 			GetComponent<Rigidbody> ().velocity = Vector3.zero;
 			GetComponent<Rigidbody> ().freezeRotation = true;
 		}
-		if (col.gameObject.name == "SpikeWall") {
+        //Stick To Spikes
+        if (col.gameObject.name == "SpikeWall") {
 			transform.position = spikeDeathPos;
 			GetComponent<Rigidbody> ().velocity = Vector3.zero;
 			GetComponent<Rigidbody> ().freezeRotation = true;

@@ -9,30 +9,43 @@ public class LevelEnd : MonoBehaviour {
 	public Text FINISH;						//TextObject That says Finished
 	public Text finishButton;				//TextObject That tells you What To Press
 	public bool levelFinished = false;		//Have you finished?
+    public GameObject players;              //Players Controller GameObject
 
-	void Start () {
+    void Start () {
+        //Start Variables
 		FINISH.text = " ";
 		finishButton.text = " ";
 		levelFinished = false;
 	}
 
-	void OnTriggerEnter() {
+    //Finish Level
+    void OnTriggerEnter() {
 		FINISH.text = "YOU COMPLETED THAT ARBITRARY TASK!!";
-		finishButton.text = "Respawn To Continue";
-		levelFinished = true;
-	}
+        //Display which Controls to use
+        if (players.GetComponent<CharacterSelect>().xboxController)
+        {
+            finishButton.text = "Press 'A' To Continue";
+        } else
+        {
+            finishButton.text = "Press 'Space' To Continue";
+        }
+        levelFinished = true;
+    }
 	
 	// Update is called once per frame
 	void Update () {
+        //Go To Next Level Input
 		if (levelFinished) {
-			if (Input.GetKeyDown(KeyCode.R)) {
+			if (Input.GetKeyDown(KeyCode.Space)) {
 				NextLevel ();
 			}
-			if (Input.GetKeyDown(KeyCode.JoystickButton3)) {
+			if (Input.GetKeyDown(KeyCode.JoystickButton0)) {
 				NextLevel ();
 			}
 		}
 	}
+
+    //Go To Next Level
 	void NextLevel () {
 		FINISH.text = "Next Level Loading...";
 		finishButton.text = " ";

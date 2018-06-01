@@ -41,6 +41,8 @@ GameObject:
   - component: {fileID: 183744639181812874}
   - component: {fileID: 137148859583852004}
   - component: {fileID: 64355742855749694}
+  - component: {fileID: 64936603582153816}
+  - component: {fileID: 64756952240085754}
   m_Layer: 0
   m_Name: Flag
   m_TagString: Untagged
@@ -186,6 +188,34 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 0}
+--- !u!64 &64756952240085754
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1306902121718910}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: ab95448db7d62de4cbeced5bd15b844f, type: 3}
+--- !u!64 &64936603582153816
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1306902121718910}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: ab95448db7d62de4cbeced5bd15b844f, type: 3}
 --- !u!65 &65394965063148916
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -229,6 +259,7 @@ MonoBehaviour:
   FINISH: {fileID: 0}
   finishButton: {fileID: 0}
   levelFinished: 0
+  players: {fileID: 0}
 --- !u!114 &114578092447738054
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -6,17 +6,13 @@ using UnityEngine.SceneManagement;
 
 public class MenuInGame : MonoBehaviour {
 
-	public GameObject inGameText;
-	public GameObject menuText;
-	public GameObject resume;
+	public GameObject inGameText;           //InGame NonMenu Text
+	public GameObject menuText;             //InGame Menu Text
+	public GameObject resume;               //Resume Button
 
-	private bool paused = false;
-
-	// Use this for initialization
-	void Start () {
-		
-	}
+	private bool paused = false;            //Whether Paused or Not
 	
+
 	// Update is called once per frame
 	void Update () {
 		//Calling Menu
@@ -35,24 +31,37 @@ public class MenuInGame : MonoBehaviour {
 	}
 
 	public void MenuOpen() {
+        //Disable InGame Stuff
 		GetComponent<CharacterSelect>().enabled = false;
 		GetComponent<CharacterSelect>().disablecharacters ();
 		inGameText.SetActive (false);
+        //Enable Menu
 		menuText.SetActive (true);
 		EventSystem.current.SetSelectedGameObject (resume);
-	}
+        //Cursor Enable
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
 
 	public void MenuClose() {
+        //Enable Game Stuff
 		GetComponent<CharacterSelect>().enabled = true;
 		GetComponent<CharacterSelect> ().changecharacter ();
 		inGameText.SetActive (true);
+        //Disable Menu
 		menuText.SetActive (false);
-	}
+        //Cursor Disable
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
 
+
+    //Restart
 	public void Restart() {
-		Application.LoadLevel (Application.loadedLevel);
-	}
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
 
+    //Main Menu
 	public void MainMenu() {
 		SceneManager.LoadScene (0);
 	}
