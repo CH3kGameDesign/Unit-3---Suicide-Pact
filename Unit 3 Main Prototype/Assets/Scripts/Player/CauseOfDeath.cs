@@ -14,6 +14,8 @@ public class CauseOfDeath : MonoBehaviour {
 
 	private Vector3 spikeDeathPos;                  //Keep Player Attached To Spikes
 
+	private bool boom = true;								//Boom or no Boom?
+
 	//////////////////////////////////////////
 	// What Death Does
 	public void Death () {
@@ -27,7 +29,10 @@ public class CauseOfDeath : MonoBehaviour {
 			GetComponent<Movement> ().notdead = false;
 
             //Big Boom
-            Instantiate(deathParticles, transform.position, Quaternion.Euler(0, 0, 0));
+			if (boom == true) {
+				Instantiate (deathParticles, transform.position, Quaternion.Euler (0, 0, 0));
+			}
+			boom = true;
 
             //Make the Player Look Dead
             deadMaterials = GetComponentInChildren<MeshRenderer>().materials;
@@ -43,22 +48,28 @@ public class CauseOfDeath : MonoBehaviour {
 	//////////////////////////////////////////
 	void OnTriggerEnter (Collider col) {
 		//if (GetComponent<Movement> ().notdead == true) {
-			 //Death By Drowning
-			if (col.gameObject.name == "Waste") {
-				Death ();
-			}
+		 //Death By Drowning
+		if (col.gameObject.name == "Waste") {
+			Death ();
+		}
 
-            //Death By Hook
-			if (col.gameObject.name == "HookPlayerPos") {
-				col.gameObject.GetComponentInParent<Rigidbody>().AddForce (cameraCorrection.transform.forward * 10);
-				Death ();
-			}
+         //Death By Hook
+		if (col.gameObject.name == "HookPlayerPos") {
+			col.gameObject.GetComponentInParent<Rigidbody>().AddForce (cameraCorrection.transform.forward * 10);
+			Death ();
+		}
 
-            //Death By Spikes
-			if (col.gameObject.name == "SpikeWall") {
-				spikeDeathPos = transform.position;
-				Death ();
-			}
+         //Death By Spikes
+		if (col.gameObject.name == "SpikeWall") {
+			spikeDeathPos = transform.position;
+			Death ();
+		}
+
+		//Death By Thingy In Arcady Level
+		if (col.gameObject.name == "WeirdThingy") {
+			boom = false;
+			Death ();
+		}
 
 		//}
 	}

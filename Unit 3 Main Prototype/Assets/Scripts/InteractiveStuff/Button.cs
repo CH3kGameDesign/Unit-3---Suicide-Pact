@@ -5,6 +5,9 @@ using UnityEngine;
 public class Button : MonoBehaviour {
 
 	public GameObject door;                         //The door it activates
+	public List <GameObject> doors;						//Multiple doors opening one after the other
+	public bool multipleDoors = false;						//Tick if using multiple doors
+
 	public GameObject launchPad;                    //The launchpad it activates
     public GameObject movingPlatform;               //The movingplatform it activates
     public GameObject powerLine;                    //The powerline that links the button to the buttonee
@@ -14,6 +17,7 @@ public class Button : MonoBehaviour {
 	public float buttonCooldownLimit = 20;			//Time before buttonCoolDown does something
 	private float buttonCooldown;					//Legit just for counting how long powerline should light for tall button press
 	private bool buttonTall;						//Whether button is tall
+	private int doorNumber = 0;					//Which door to turn on/off
 
 	// Use this for initialization
 	void Start () {
@@ -80,12 +84,29 @@ public class Button : MonoBehaviour {
                     {
                         movingPlatform.GetComponent<MovingPlatform>().move = true;
                     }
+					//Use Multiple Doors
+					if (multipleDoors)
+					{
+						MultipleDoors ();
+					}
                     //PowerLine On
                     powerLine.GetComponent<MeshRenderer>().material = powerOn;
                     buttonCooldown = 0;
                     buttonTall = true;
                 }
             }
+		}
+	}
+
+	//Open/Close Multiple Doors
+	void MultipleDoors() {
+		doors [doorNumber].SetActive(true);
+		doorNumber++;
+		if (doorNumber < doors.Count) {
+			doors [doorNumber].SetActive(false);
+			Invoke ("MultipleDoors", 2);
+		} else {
+			doorNumber = 0;
 		}
 	}
 }
