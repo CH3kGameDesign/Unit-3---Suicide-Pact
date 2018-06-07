@@ -56,6 +56,6 @@ public class LevelEnd : MonoBehaviour {
 		int nextSceneIndex = SceneManager.GetActiveScene ().buildIndex + 1;
 		if (SceneManager.sceneCountInBuildSettings > nextSceneIndex) {
 			SceneManager.LoadScene (nextSceneIndex);
-		}
-	}
+		} else SceneManager.LoadScene(0);
+    }
 }

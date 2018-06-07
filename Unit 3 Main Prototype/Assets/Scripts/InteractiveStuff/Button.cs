@@ -98,15 +98,53 @@ public class Button : MonoBehaviour {
 		}
 	}
 
-	//Open/Close Multiple Doors
-	void MultipleDoors() {
+    //Open/Close Multiple Doors
+
+    void MultipleDoors()
+    {
+        doorNumber = 0;
+        doors[doorNumber].SetActive(false);
+        Invoke ("MultipleDoors2", 0.6f);
+    }
+    void MultipleDoors2()
+    {
+        doors[doorNumber].SetActive(true);
+        doorNumber = 1;
+        doors[doorNumber].SetActive(false);
+        if (doors.Count > 2)
+            Invoke("MultipleDoors3", 0.6f);
+        else Invoke("MultipleDoorsClose", 0.6f);
+    }
+    void MultipleDoors3()
+    {
+        doors[doorNumber].SetActive(true);
+        doorNumber = 2;
+        doors[doorNumber].SetActive(false);
+        if (doors.Count > 3)
+            Invoke("MultipleDoors4", 0.6f);
+        else Invoke("MultipleDoorsClose", 0.6f);
+    }
+    void MultipleDoors4()
+    {
+        doors[doorNumber].SetActive(true);
+        doorNumber = 3;
+        doors[doorNumber].SetActive(false);
+        Invoke("MultipleDoorsClose", 0.6f);
+    }
+    void MultipleDoorsClose()
+    {
+        doors[doorNumber].SetActive(true);
+    }
+
+    /*
+    void MultipleDoors2() {
 		doors [doorNumber].SetActive(true);
 		doorNumber++;
-		if (doorNumber < doors.Count) {
-			doors [doorNumber].SetActive(false);
-			Invoke ("MultipleDoors", 2);
-		} else {
-			doorNumber = 0;
-		}
+		if (doorNumber <= doors.Count) {
+            Debug.Log(doorNumber);
+            doors [doorNumber].SetActive(false);
+			Invoke ("MultipleDoors2", 1);
+		} 
 	}
+    */
 }
