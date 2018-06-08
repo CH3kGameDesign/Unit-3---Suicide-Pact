@@ -5,8 +5,8 @@ using UnityEngine;
 public class Button : MonoBehaviour {
 
 	public GameObject door;                         //The door it activates
-	public List <GameObject> doors;						//Multiple doors opening one after the other
-	public bool multipleDoors = false;						//Tick if using multiple doors
+	public List <GameObject> doors;				    //Multiple doors opening one after the other
+	public bool multipleDoors = false;				//Tick if using multiple doors
 
 	public GameObject launchPad;                    //The launchpad it activates
     public GameObject movingPlatform;               //The movingplatform it activates
@@ -17,7 +17,7 @@ public class Button : MonoBehaviour {
 	public float buttonCooldownLimit = 20;			//Time before buttonCoolDown does something
 	private float buttonCooldown;					//Legit just for counting how long powerline should light for tall button press
 	private bool buttonTall;						//Whether button is tall
-	private int doorNumber = 0;					//Which door to turn on/off
+	private int doorNumber = 0;					    //Which door to turn on/off
 
 	// Use this for initialization
 	void Start () {

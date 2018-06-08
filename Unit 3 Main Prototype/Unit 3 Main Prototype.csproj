@@ -320,7 +320,6 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\CameraStuff\CameraController.cs" />
     <Compile Include="Assets\Scripts\CameraStuff\CameraZoom.cs" />
-    <Compile Include="Assets\Scripts\EasterEgg\Pachinko.cs" />
     <Compile Include="Assets\Scripts\InteractiveStuff\Button.cs" />
     <Compile Include="Assets\Scripts\InteractiveStuff\LaunchPad.cs" />
     <Compile Include="Assets\Scripts\InteractiveStuff\LevelEnd.cs" />

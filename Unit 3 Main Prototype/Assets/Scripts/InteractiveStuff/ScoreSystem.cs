@@ -5,18 +5,18 @@ using UnityEngine.UI;
 
 public class ScoreSystem : MonoBehaviour {
 
-    public Text scoreText;
-    public GameObject easterEgg;
-    public int scorePoints;
+    public Text scoreText;                              //Display How Much You Scored
+    public GameObject easterEgg;                        //EASTEEER EGGGU
+    public int scorePoints;                             //How Much You Scored
 
-	// Use this for initialization
+	
 	void Start () {
-        scorePoints = 0;
+        scorePoints = 0;                                //Start at 0
     }
 	
-	// Update is called once per frame
+	
 	void Update () {
-        scoreText.text = "Score: " + scorePoints;
+        scoreText.text = "Score: " + scorePoints;       //Display Score
 
         if (scorePoints > 999)
             easterEgg.transform.position = new Vector3(1.5f, 14.5f, -17.75f);
