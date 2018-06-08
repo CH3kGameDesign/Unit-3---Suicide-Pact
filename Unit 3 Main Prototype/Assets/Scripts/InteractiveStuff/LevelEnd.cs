@@ -8,6 +8,7 @@ public class LevelEnd : MonoBehaviour {
 
 	public Text FINISH;						//TextObject That says Finished
 	public Text finishButton;				//TextObject That tells you What To Press
+    
 	public bool levelFinished = false;		//Have you finished?
     public GameObject players;              //Players Controller GameObject
     public GameObject fireworks;            //Legit Fireworks
@@ -23,6 +24,8 @@ public class LevelEnd : MonoBehaviour {
     void OnTriggerEnter() {
 		FINISH.text = "YOU COMPLETED THAT ARBITRARY TASK!!";
         Instantiate(fireworks, transform.position, Quaternion.Euler (-90,0,0));
+        GameProgress.levelComplete[SceneManager.GetActiveScene().buildIndex] = 1;
+        SaveLoad.Save();
         //Display which Controls to use
         if (players.GetComponent<CharacterSelect>().xboxController)
         {
@@ -45,7 +48,7 @@ public class LevelEnd : MonoBehaviour {
 				NextLevel ();
 			}
 		}
-	}
+    }
 
     //Go To Next Level
 	void NextLevel () {

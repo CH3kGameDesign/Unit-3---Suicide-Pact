@@ -339,6 +339,8 @@
     <Compile Include="Assets\Scripts\Rope\BezierCurve.cs" />
     <Compile Include="Assets\Scripts\Rope\Hook.cs" />
     <Compile Include="Assets\Scripts\Rope\Rope.cs" />
+    <Compile Include="Assets\Scripts\SaveLoad\GameProgress.cs" />
+    <Compile Include="Assets\Scripts\SaveLoad\SaveLoad.cs" />
     <Compile Include="Assets\Third Party Assets\OBJExport\OBJExporter.cs" />
     <Compile Include="Assets\Third Party Assets\Particles\ParticleSystems\Scripts\AfterburnerPhysicsForce.cs" />
     <Compile Include="Assets\Third Party Assets\Particles\ParticleSystems\Scripts\ExplosionFireAndDebris.cs" />

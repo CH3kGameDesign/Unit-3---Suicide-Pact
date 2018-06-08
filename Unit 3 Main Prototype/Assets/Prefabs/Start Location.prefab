@@ -7374,6 +7374,8 @@ MonoBehaviour:
   - {fileID: 100000, guid: 1206127aa3c604b48b2432320d2b38a0, type: 3}
   - {fileID: 100000, guid: e4a81eee007c45a42bda605d118c18a8, type: 3}
   - {fileID: 100000, guid: 6d6a6d07fabd02347bc0e68eeb77b0f8, type: 3}
+  - {fileID: 100000, guid: 2a9be47e0d4ec6d4fac88a2c783b0a65, type: 3}
+  - {fileID: 100000, guid: 9fa43c33d36c73843962d795aff6de3b, type: 3}
   Player1: {fileID: 1451025045862904}
   Player2: {fileID: 1887137623170246}
   Player3: {fileID: 1146912504687356}

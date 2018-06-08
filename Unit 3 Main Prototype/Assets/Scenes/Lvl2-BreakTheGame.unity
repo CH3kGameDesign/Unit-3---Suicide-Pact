@@ -2628,7 +2628,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 1031537492}
   scoreAmount: 100
-  deathParticles: {fileID: 100010, guid: 031d08f52af1daa4f929b85221519426, type: 2}
 --- !u!23 &201367351
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2727,7 +2726,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 1031537492}
   scoreAmount: 250
-  deathParticles: {fileID: 100010, guid: 031d08f52af1daa4f929b85221519426, type: 2}
 --- !u!23 &203013106
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4888,7 +4886,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 1031537492}
   scoreAmount: 100
-  deathParticles: {fileID: 100010, guid: 031d08f52af1daa4f929b85221519426, type: 2}
 --- !u!23 &291355525
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8762,7 +8759,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 1031537492}
   scoreAmount: 150
-  deathParticles: {fileID: 100010, guid: 031d08f52af1daa4f929b85221519426, type: 2}
 --- !u!23 &422340262
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12719,7 +12715,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 1031537492}
   scoreAmount: 150
-  deathParticles: {fileID: 100010, guid: 031d08f52af1daa4f929b85221519426, type: 2}
 --- !u!23 &678084062
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -23923,7 +23918,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 1031537492}
   scoreAmount: 50
-  deathParticles: {fileID: 100010, guid: 031d08f52af1daa4f929b85221519426, type: 2}
 --- !u!23 &1015358637
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -39715,6 +39709,8 @@ MonoBehaviour:
   - {fileID: 100000, guid: 1206127aa3c604b48b2432320d2b38a0, type: 3}
   - {fileID: 100000, guid: e4a81eee007c45a42bda605d118c18a8, type: 3}
   - {fileID: 100000, guid: 6d6a6d07fabd02347bc0e68eeb77b0f8, type: 3}
+  - {fileID: 100000, guid: 2a9be47e0d4ec6d4fac88a2c783b0a65, type: 3}
+  - {fileID: 100000, guid: 9fa43c33d36c73843962d795aff6de3b, type: 3}
   Player1: {fileID: 1822995741}
   Player2: {fileID: 1326921153}
   Player3: {fileID: 1882906548}
@@ -42241,7 +42237,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 1031537492}
   scoreAmount: 50
-  deathParticles: {fileID: 100010, guid: 031d08f52af1daa4f929b85221519426, type: 2}
 --- !u!23 &1814323243
 MeshRenderer:
   m_ObjectHideFlags: 0
