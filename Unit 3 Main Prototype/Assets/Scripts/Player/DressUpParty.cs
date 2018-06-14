@@ -4,7 +4,13 @@ using UnityEngine;
 
 public class DressUpParty : MonoBehaviour {
 
-	public List<GameObject> hatList = new List<GameObject>();           //List of Hat People
+    /*
+    WHAT SCRIPT DOES:
+    -   Change Player Hats/Models
+    -   Resets Player Hats/Models On Respawn
+    */
+
+    public List<GameObject> hatList = new List<GameObject>();           //List of Hat People
 	public GameObject Player1;                                          //Self Explanatory
 	public GameObject Player2;                                          //Self Explanatory
     public GameObject Player3;                                          //Self Explanatory

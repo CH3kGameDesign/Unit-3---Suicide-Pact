@@ -321,13 +321,15 @@
     <Compile Include="Assets\Scripts\CameraStuff\CameraController.cs" />
     <Compile Include="Assets\Scripts\CameraStuff\CameraZoom.cs" />
     <Compile Include="Assets\Scripts\InteractiveStuff\Button.cs" />
+    <Compile Include="Assets\Scripts\InteractiveStuff\EasterEgg.cs" />
     <Compile Include="Assets\Scripts\InteractiveStuff\LaunchPad.cs" />
     <Compile Include="Assets\Scripts\InteractiveStuff\LevelEnd.cs" />
     <Compile Include="Assets\Scripts\InteractiveStuff\MovingPlatform.cs" />
     <Compile Include="Assets\Scripts\InteractiveStuff\ScorePoints.cs" />
     <Compile Include="Assets\Scripts\InteractiveStuff\ScoreSystem.cs" />
-    <Compile Include="Assets\Scripts\InteractiveStuff\SpikeWall.cs" />
-    <Compile Include="Assets\Scripts\MainMenuManager.cs" />
+    <Compile Include="Assets\Scripts\MainMenuStuff\Credits.cs" />
+    <Compile Include="Assets\Scripts\MainMenuStuff\CreditsBlowForce.cs" />
+    <Compile Include="Assets\Scripts\MainMenuStuff\MainMenuManager.cs" />
     <Compile Include="Assets\Scripts\Player\CauseOfDeath.cs" />
     <Compile Include="Assets\Scripts\Player\CharacterSelect.cs" />
     <Compile Include="Assets\Scripts\Player\DressUpParty.cs" />

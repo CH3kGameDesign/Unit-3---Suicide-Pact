@@ -4,6 +4,13 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 [System.Serializable]
+
+/*
+    WHAT SCRIPT DOES:
+    -   Keeps track of level progress
+ */
+
+//Keep Track of Game Progress
 public class GameProgress
 {
     public static List<int> levelComplete = new List<int>();

@@ -4,7 +4,14 @@ using UnityEngine;
 
 public class Hook : MonoBehaviour {
 
-	public GameObject Origin;
+    /*
+    WHAT SCRIPT DOES:
+    -   Ensures Hook Faces The Right Direction
+    -   Slows Down Hook When Nothings Attached
+    */
+
+
+    public GameObject Origin;
 
 	//Just used to slow down hook
 	private float velX;

@@ -4,7 +4,14 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour {
 
-	public float hcamspeed = 0.2f;                  //Speed To Rotate Character         MUST MATCH CAMERA ROTATE SPEED
+    /*
+    WHAT SCRIPT DOES:
+    -   Moves Player
+    -   Jump
+    -   Respawns Character
+    */
+
+    public float hcamspeed = 0.2f;                  //Speed To Rotate Character         MUST MATCH CAMERA ROTATE SPEED
 	public float jumpForce = 10;                    //How Much Force is Applied When Jumping
 	public float speed = 2;                         //Character Speed
 	public float maxspeed = 2;                      //Character MaxSpeed

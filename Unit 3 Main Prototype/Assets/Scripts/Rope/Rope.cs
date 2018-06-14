@@ -3,7 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Rope : MonoBehaviour {
-	
+
+    /*
+    WHAT SCRIPT DOES:
+    -   Displays Rope
+    -   Connects Hook To Source
+    -   Makes Hook Swingable
+    */
+
     //Objects that will interact with the rope
     public Transform whatTheRopeIsConnectedTo;
     public Transform whatIsHangingFromTheRope;

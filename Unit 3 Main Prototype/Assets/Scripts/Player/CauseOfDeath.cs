@@ -4,7 +4,14 @@ using UnityEngine;
 
 public class CauseOfDeath : MonoBehaviour {
 
-	public GameObject yreset;                       //Lowest Point the Player Can Go
+    /*
+    WHAT SCRIPT DOES:
+    -   Kills The Player In A Multitude of Fun and Exciting Ways
+    -   Boom
+    -   Ragdoll The Character
+    */
+
+    public GameObject yreset;                       //Lowest Point the Player Can Go
 	public GameObject playerModel;                  //Player Model
 	public GameObject cameraCorrection;             //CharCorrection
     public GameObject deathParticles;               //BIG BOOM on Death
@@ -14,7 +21,7 @@ public class CauseOfDeath : MonoBehaviour {
 
 	private Vector3 spikeDeathPos;                  //Keep Player Attached To Spikes
 
-	private bool boom = true;								//Boom or no Boom?
+	private bool boom = true;					    //Boom or no Boom?
 
 	//////////////////////////////////////////
 	// What Death Does

@@ -6,16 +6,22 @@ using UnityEngine.SceneManagement;
 
 public class MenuInGame : MonoBehaviour {
 
-	public GameObject inGameText;           //InGame NonMenu Text
+    /*
+    WHAT SCRIPT DOES:
+    -   Call In Game Menu
+    -   Does All That Button Stuff
+    -   Cursor Enable/Disable
+    */
+
+    public GameObject inGameText;           //InGame NonMenu Text
 	public GameObject menuText;             //InGame Menu Text
 	public GameObject resume;               //Resume Button
 
 	private bool paused = false;            //Whether Paused or Not
-	
 
-	// Update is called once per frame
-	void Update () {
-		//Calling Menu
+
+    //Calling Menu
+    void Update () {
 		if (Input.GetKeyDown (KeyCode.JoystickButton7) || Input.GetKeyDown (KeyCode.Return)) {
 			if (!paused) {
 				MenuOpen ();

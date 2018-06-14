@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class MoveWithBeneath : MonoBehaviour {
 
+    /*
+    WHAT SCRIPT DOES:
+    -   Moves Character With Floor Beneath
+    */
+
     private Vector3 position;                   //Floor Present Position
     private Vector3 pastPosition;               //Floor Past Position
     private Vector3 distancePosition;           //Distance Between Past and Present Positions
 
-    // Use this for initialization
+    // Initialization
     void Start () {
         //Set Variables to null
         position = Vector3.zero;
@@ -16,7 +21,7 @@ public class MoveWithBeneath : MonoBehaviour {
         distancePosition = Vector3.zero;
     }
 	
-	// Update is called once per frame
+	//Move with Ground Beneath
 	void Update () {
         RaycastHit hit;
         //Check what ground is beneath you

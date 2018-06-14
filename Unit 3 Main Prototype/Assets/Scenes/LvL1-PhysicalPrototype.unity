@@ -89,7 +89,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
-  m_LightingDataAsset: {fileID: 112000104, guid: ce521f2ee66e11d42a4e53f36424278b,
+  m_LightingDataAsset: {fileID: 112000118, guid: ce521f2ee66e11d42a4e53f36424278b,
     type: 2}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -4217,7 +4217,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh-605854
+  m_Name: pb_Mesh-25424
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -21438,6 +21438,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 997013344}
+  doors: []
+  multipleDoors: 0
   launchPad: {fileID: 0}
   movingPlatform: {fileID: 0}
   powerLine: {fileID: 428140902}
@@ -33532,6 +33534,11 @@ Prefab:
       propertyPath: players
       value: 
       objectReference: {fileID: 1282943267}
+    - target: {fileID: 114469750894278246, guid: 83f6a4cc06eb2b24a86c4e6a33fadbf2,
+        type: 2}
+      propertyPath: easterEgg
+      value: 
+      objectReference: {fileID: 2144686450}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 83f6a4cc06eb2b24a86c4e6a33fadbf2, type: 2}
   m_IsPrefabParent: 0
@@ -48021,3 +48028,8 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c67c884af9861a9499dbeb0fcbb1124b, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &2144686450 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1913431046853542, guid: c67c884af9861a9499dbeb0fcbb1124b,
+    type: 2}
+  m_PrefabInternal: {fileID: 2144686449}

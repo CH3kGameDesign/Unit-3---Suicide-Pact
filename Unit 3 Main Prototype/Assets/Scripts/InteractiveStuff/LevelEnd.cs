@@ -6,12 +6,20 @@ using UnityEngine.SceneManagement;
 
 public class LevelEnd : MonoBehaviour {
 
-	public Text FINISH;						//TextObject That says Finished
+    /*
+    WHAT SCRIPT DOES:
+    -   Finishes The Level
+    -   Changes GameProgress
+    -   Loads Next Scene
+    */
+
+    public Text FINISH;						//TextObject That says Finished
 	public Text finishButton;				//TextObject That tells you What To Press
     
 	public bool levelFinished = false;		//Have you finished?
     public GameObject players;              //Players Controller GameObject
     public GameObject fireworks;            //Legit Fireworks
+    public GameObject easterEgg;            //Easter Egg
 
     void Start () {
         //Start Variables
@@ -25,6 +33,8 @@ public class LevelEnd : MonoBehaviour {
 		FINISH.text = "YOU COMPLETED THAT ARBITRARY TASK!!";
         Instantiate(fireworks, transform.position, Quaternion.Euler (-90,0,0));
         GameProgress.levelComplete[SceneManager.GetActiveScene().buildIndex] = 1;
+        if (easterEgg.GetComponent<EasterEgg>().found == true)
+            GameProgress.levelComplete[SceneManager.GetActiveScene().buildIndex] = 2;
         SaveLoad.Save();
         //Display which Controls to use
         if (players.GetComponent<CharacterSelect>().xboxController)

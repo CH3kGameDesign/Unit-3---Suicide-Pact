@@ -5,7 +5,16 @@ using UnityEngine.UI;
 
 public class CharacterSelect : MonoBehaviour {
 
-	public Text charSelectText;                 //Selected Character Text
+    /*
+    WHAT SCRIPT DOES:
+    -   Changes Characters
+    -   Display Controls
+    -   Display DeadText If Dead
+    -   Change Cameras On MenuPress
+    */
+
+
+    public Text charSelectText;                 //Selected Character Text
 	public Image deadBG;                        //Dead Text Background
 	public Text deadText;                       //Dead Text
 	public Text controlsPC;                     //PC Controls Text

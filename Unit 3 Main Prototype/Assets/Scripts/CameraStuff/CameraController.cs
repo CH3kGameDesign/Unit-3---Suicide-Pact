@@ -4,7 +4,13 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour {
 
-	public float hcamspeed = 2;         //Speed Rotating Horizontally
+    /*
+    WHAT SCRIPT DOES:
+    -   Move Camera
+    -   Hide Cursor
+    */
+
+    public float hcamspeed = 2;         //Speed Rotating Horizontally
 	public float vcamspeed = 2;         //Speed Rotating Vertically
 
 	public bool notdead = true;         //Whether Alive Or Not

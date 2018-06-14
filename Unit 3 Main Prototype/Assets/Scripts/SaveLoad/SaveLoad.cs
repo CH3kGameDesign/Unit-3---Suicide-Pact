@@ -6,6 +6,14 @@ using System.IO;
 
 public static class SaveLoad
 {
+    /*
+        WHAT SCRIPT DOES:
+        -   Saves Progress (Called by LevelEnd)
+        -   Loads Progress (Called by MainMenuManager)
+        -   Resets Progress (Called by MainMenuManager)
+    */
+
+    //SAVE
     public static void Save()
     {
         BinaryFormatter bf = new BinaryFormatter();
@@ -14,6 +22,7 @@ public static class SaveLoad
         Debug.Log("Saved To " + Application.persistentDataPath + "/levelComplete.gd");
         file.Close();
     }
+    //LOAD
     public static void Load()
     {
         if (File.Exists(Application.persistentDataPath + "/levelComplete.gd"))
@@ -23,6 +32,15 @@ public static class SaveLoad
             GameProgress.levelComplete = (List<int>)bf.Deserialize(file);
             file.Close();
         }
+
+    }
+    //RESET PROGRESS
+    public static void ResetProgress()
+    {
+        //if (File.Exists(Application.persistentDataPath + "/levelComplete.gd"))
+        //{
+            File.Delete(Application.persistentDataPath + "/levelComplete.gd");
+        //}
 
     }
 }

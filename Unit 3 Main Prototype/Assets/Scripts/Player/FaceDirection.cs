@@ -4,7 +4,13 @@ using UnityEngine;
 
 public class FaceDirection : MonoBehaviour {
 
-	public GameObject Camera;       //Camera
+    /*
+    WHAT SCRIPT DOES:
+    -   Ensure Model Faces Forward In Terms Of Camera
+    -   Crash Bandicoot Shadow
+    */
+
+    public GameObject Camera;       //Camera
     public GameObject shadow;       //Crash Bandicoot Shadow
 
     void Update () {

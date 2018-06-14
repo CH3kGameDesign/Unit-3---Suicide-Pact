@@ -4,7 +4,12 @@ using UnityEngine;
 
 public class LaunchPad : MonoBehaviour {
 
-	public Animator anim;
+    /*
+    WHAT SCRIPT DOES:
+    -   Yeet the Player
+    */
+
+    public Animator anim;
 	public bool launch;
 	public float strengthup;
 	public float strengthfor;
@@ -26,7 +31,7 @@ public class LaunchPad : MonoBehaviour {
 		}
 	}
 
-
+    //LAAUUAUUUANCH THE PLAYER if player is there
 	void OnTriggerStay(Collider col) {
 		if (launch) {
 			col.GetComponentInParent<Rigidbody> ().AddForce ((transform.up) * strengthup, ForceMode.Impulse);
@@ -38,6 +43,7 @@ public class LaunchPad : MonoBehaviour {
 		launchable = true;
 	}
 
+    //Don't Launch Anything if not there on Launch
 	void OnTriggerExit() {
 		launchable = false;
 	}

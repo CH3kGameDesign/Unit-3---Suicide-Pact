@@ -4,7 +4,13 @@ using UnityEngine;
 
 public class BezierCurve : MonoBehaviour {
 
-	 //Update the positions of the rope section
+    /*
+    WHAT SCRIPT DOES:
+    -   Makes The Rope Curve (Bezier Curve Style)
+    */
+
+
+    //Update the positions of the rope section
     public static void GetBezierCurve(Vector3 A, Vector3 B, Vector3 C, Vector3 D, List<Vector3> allRopeSections)
     {
         //The resolution of the line

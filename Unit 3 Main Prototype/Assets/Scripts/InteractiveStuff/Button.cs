@@ -4,7 +4,13 @@ using UnityEngine;
 
 public class Button : MonoBehaviour {
 
-	public GameObject door;                         //The door it activates
+    /*
+    WHAT SCRIPT DOES:
+    -   Activate Object Button Is Attached To
+    -   Turn On/Off Powerline
+    */
+
+    public GameObject door;                         //The door it activates
 	public List <GameObject> doors;				    //Multiple doors opening one after the other
 	public bool multipleDoors = false;				//Tick if using multiple doors
 

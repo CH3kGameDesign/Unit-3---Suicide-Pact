@@ -4,16 +4,21 @@ using UnityEngine;
 
 public class MovingPlatform : MonoBehaviour {
 
-	public Animator anim;
+    /*
+    WHAT SCRIPT DOES:
+    -   Move Moving Platform
+    */
+
+    public Animator anim;
 	public bool move;
 
-	// Use this for initialization
+	// Initialization
 	void Start () {
 		anim = GetComponent<Animator> ();
 		move = false;
 	}
 	
-	// Update is called once per frame
+	// Activate Animation if asked to move
 	void Update () {
 		if (move) {
 			anim.Play ("MovingPlatform1Moving");

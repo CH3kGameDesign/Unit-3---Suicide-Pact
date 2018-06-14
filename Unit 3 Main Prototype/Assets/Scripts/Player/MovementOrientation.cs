@@ -4,18 +4,23 @@ using UnityEngine;
 
 public class MovementOrientation : MonoBehaviour {
 
-	public float hcamspeed = 2;
+    /*
+    WHAT SCRIPT DOES:
+    -   Ensures Forward Means Forward In Terms Of Movement
+    */
 
-	public bool notdead = true;
+    public float hcamspeed = 2;         //Horizontal Camera Speed
 
-	private float yaw = 0;
+	public bool notdead = true;         //Dead Or No
 
-	// Use this for initialization
+	private float yaw = 0;              //Y Axis Rotation
+
+	// Initialization
 	void Start () {
 		
 	}
 
-	// Update is called once per frame
+	// Rotate
 	void Update () {
 		yaw += hcamspeed * Input.GetAxis ("Mouse X");
 		transform.eulerAngles = new Vector3 (0.0f, yaw, 0.0f);
