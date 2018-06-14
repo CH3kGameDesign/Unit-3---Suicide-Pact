@@ -32,7 +32,8 @@ public class LevelEnd : MonoBehaviour {
     void OnTriggerEnter() {
 		FINISH.text = "YOU COMPLETED THAT ARBITRARY TASK!!";
         Instantiate(fireworks, transform.position, Quaternion.Euler (-90,0,0));
-        GameProgress.levelComplete[SceneManager.GetActiveScene().buildIndex] = 1;
+        if (GameProgress.levelComplete[SceneManager.GetActiveScene().buildIndex] == 0)
+            GameProgress.levelComplete[SceneManager.GetActiveScene().buildIndex] = 1;
         if (easterEgg.GetComponent<EasterEgg>().found == true)
             GameProgress.levelComplete[SceneManager.GetActiveScene().buildIndex] = 2;
         SaveLoad.Save();
