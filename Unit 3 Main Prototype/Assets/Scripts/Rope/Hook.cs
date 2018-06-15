@@ -17,7 +17,8 @@ public class Hook : MonoBehaviour {
 	private float velX;
 	private float velY;
 	private float velZ;
-	private bool notAttached = true;
+    
+	private bool notAttached = true;            //Is Something Attached Or Not
 
 
 	void Update () {

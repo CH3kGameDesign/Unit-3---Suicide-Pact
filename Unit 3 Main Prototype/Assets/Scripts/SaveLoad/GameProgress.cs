@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 /*
     WHAT SCRIPT DOES:
-    -   Keeps track of level progress
+    -   Keeps track of game progress
  */
 
 //Keep Track of Game Progress

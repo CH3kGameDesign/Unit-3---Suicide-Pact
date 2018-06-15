@@ -9,8 +9,8 @@ public class MovingPlatform : MonoBehaviour {
     -   Move Moving Platform
     */
 
-    public Animator anim;
-	public bool move;
+    public Animator anim;       //Get Animator Component
+	public bool move;           //Whether To Move
 
 	// Initialization
 	void Start () {

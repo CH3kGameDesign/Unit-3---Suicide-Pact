@@ -15,10 +15,6 @@ public class MovementOrientation : MonoBehaviour {
 
 	private float yaw = 0;              //Y Axis Rotation
 
-	// Initialization
-	void Start () {
-		
-	}
 
 	// Rotate
 	void Update () {

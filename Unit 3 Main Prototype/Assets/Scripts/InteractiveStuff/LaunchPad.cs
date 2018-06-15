@@ -9,18 +9,14 @@ public class LaunchPad : MonoBehaviour {
     -   Yeet the Player
     */
 
-    public Animator anim;
-	public bool launch;
-	public float strengthup;
-	public float strengthfor;
+    public Animator anim;           //Animator Component of LaunchPad
+	public bool launch;             //Launch (Controlled By Button Script)
+	public float strengthup;        //Launch Force Up
+	public float strengthfor;       //Launch Force Out
 
-	private bool launchable;
+	private bool launchable;        //Whether Player Is On LaunchPad
 
-	// Use this for initialization
-	void Start () {
-		//anim = GetComponentInChildren<Animator> ();
-	}
-	
+
 	// Update is called once per frame
 	void Update () {
 		if (launch) {
