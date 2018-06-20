@@ -338,6 +338,9 @@
     <Compile Include="Assets\Scripts\Player\Movement.cs" />
     <Compile Include="Assets\Scripts\Player\MovementOrientation.cs" />
     <Compile Include="Assets\Scripts\Player\MoveWithBeneath.cs" />
+    <Compile Include="Assets\Scripts\Player\MultiplePlayersCharacterSelect\CharacterSelect1.cs" />
+    <Compile Include="Assets\Scripts\Player\MultiplePlayersCharacterSelect\CharacterSelect2.cs" />
+    <Compile Include="Assets\Scripts\Player\MultiplePlayersCharacterSelect\CharacterSelectManager.cs" />
     <Compile Include="Assets\Scripts\Rope\BezierCurve.cs" />
     <Compile Include="Assets\Scripts\Rope\Hook.cs" />
     <Compile Include="Assets\Scripts\Rope\Rope.cs" />
