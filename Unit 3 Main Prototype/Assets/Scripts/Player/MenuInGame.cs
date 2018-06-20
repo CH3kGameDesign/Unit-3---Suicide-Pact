@@ -22,15 +22,13 @@ public class MenuInGame : MonoBehaviour {
 
     //Calling Menu
     void Update () {
-		if (Input.GetKeyDown (KeyCode.JoystickButton7) || Input.GetKeyDown (KeyCode.Return)) {
+		if (Input.GetKeyDown (KeyCode.JoystickButton7) || Input.GetKeyDown (KeyCode.Return) || Input.GetKeyDown(KeyCode.Escape)) {
 			if (!paused) {
 				MenuOpen ();
-				paused = true;
 				return;
 			}
 			if (paused) {
 				MenuClose ();
-				paused = false;
 				return;
 			}
 		}
@@ -47,6 +45,7 @@ public class MenuInGame : MonoBehaviour {
         //Cursor Enable
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+        paused = true;
     }
 
 	public void MenuClose() {
@@ -59,6 +58,7 @@ public class MenuInGame : MonoBehaviour {
         //Cursor Disable
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        paused = false;
     }
 
 

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CharacterSelect : MonoBehaviour {
+public class CharacterSelect1 : MonoBehaviour {
 
     /*
     WHAT SCRIPT DOES:
@@ -39,31 +39,6 @@ public class CharacterSelect : MonoBehaviour {
 
 	// Ensure Starting Variables Are Correct
 	void Start () {
-        //Respawn Location and Rotations
-		player1.GetComponent<Movement> ().respawn = player1.transform.position;
-		player1.GetComponent<Movement> ().respawnRotation = player1.transform.rotation;
-
-		player2.GetComponent<Movement> ().respawn = player2.transform.position;
-		player2.GetComponent<Movement> ().respawnRotation = player2.transform.rotation;
-
-		player3.GetComponent<Movement> ().respawn = player3.transform.position;
-		player3.GetComponent<Movement> ().respawnRotation = player3.transform.rotation;
-
-		player4.GetComponent<Movement> ().respawn = player4.transform.position;
-		player4.GetComponent<Movement> ().respawnRotation = player4.transform.rotation;
-
-        //Start Variables
-		charSelectText.text = "Player 1";
-		player1.GetComponent<Movement>().enabled = true;
-		player2.GetComponent<Movement>().enabled = false;
-		player3.GetComponent<Movement>().enabled = false;
-		player4.GetComponent<Movement>().enabled = false;
-
-		player1cam.SetActive(true);
-		player2cam.SetActive(false);
-		player3cam.SetActive(false);
-		player4cam.SetActive(false);
-		menucam.SetActive(false);
 
 		controlsPC.enabled = true;
 		controlsXBOX.enabled = false;
@@ -229,58 +204,32 @@ public class CharacterSelect : MonoBehaviour {
 	//---------------------------------------------------------------------
 
 	public void changecharacter () {
-        //Select Character
-		if (charselect == 1) {
-			charSelectText.text = "Player 1";
-			player1.GetComponent<Movement>().enabled = true;
-			player2.GetComponent<Movement>().enabled = false;
-			player3.GetComponent<Movement>().enabled = false;
-			player4.GetComponent<Movement>().enabled = false;
+        GetComponent<CharacterSelectManager>().changecharacter();
 
-			player1cam.SetActive(true);
-			player2cam.SetActive(false);
-			player3cam.SetActive(false);
-			player4cam.SetActive(false);
-			menucam.SetActive(false);
+        //Select Character
+        if (charselect == 1) {
+			charSelectText.text = "Player 1";
+
+            //Halves the viewport
+            player1cam.GetComponentInChildren<Camera>().rect = new Rect(0, 0, 0.5f, 1);
 		}
 		if (charselect == 2) {
 			charSelectText.text = "Player 2";
-			player1.GetComponent<Movement>().enabled = false;
-			player2.GetComponent<Movement>().enabled = true;
-			player3.GetComponent<Movement>().enabled = false;
-			player4.GetComponent<Movement>().enabled = false;
 
-			player1cam.SetActive(false);
-			player2cam.SetActive(true);
-			player3cam.SetActive(false);
-			player4cam.SetActive(false);
-			menucam.SetActive(false);
+            //Halves the viewport
+            player2cam.GetComponentInChildren<Camera>().rect = new Rect(0, 0, 0.5f, 1);
         }
 		if (charselect == 3) {
 			charSelectText.text = "Player 3";
-			player1.GetComponent<Movement>().enabled = false;
-			player2.GetComponent<Movement>().enabled = false;
-			player3.GetComponent<Movement>().enabled = true;
-			player4.GetComponent<Movement>().enabled = false;
 
-			player1cam.SetActive(false);
-			player2cam.SetActive(false);
-			player3cam.SetActive(true);
-			player4cam.SetActive(false);
-			menucam.SetActive(false);
+            //Halves the viewport
+            player3cam.GetComponentInChildren<Camera>().rect = new Rect(0, 0, 0.5f, 1);
         }
 		if (charselect == 4) {
 			charSelectText.text = "Player 4";
-			player1.GetComponent<Movement>().enabled = false;
-			player2.GetComponent<Movement>().enabled = false;
-			player3.GetComponent<Movement>().enabled = false;
-			player4.GetComponent<Movement>().enabled = true;
 
-			player1cam.SetActive(false);
-			player2cam.SetActive(false);
-			player3cam.SetActive(false);
-			player4cam.SetActive(true);
-			menucam.SetActive(false);
+            //Halves the viewport
+            player4cam.GetComponentInChildren<Camera>().rect = new Rect(0, 0, 0.5f, 1);
         }
 
 	}
