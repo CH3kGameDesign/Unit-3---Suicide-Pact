@@ -48,7 +48,7 @@ public class CharacterSelectManager : MonoBehaviour {
 		player4.GetComponent<Movement> ().respawnRotation = player4.transform.rotation;
         
 
-        changecharacter();
+        //changecharacter();
 	}
 
 	//---------------------------------------------------------------------

@@ -6185,7 +6185,7 @@ MonoBehaviour:
   player4cam: {fileID: 885675382}
   menucam: {fileID: 1725807973}
   charselect: 1
-  xboxController: 0
+  xboxController: 1
 --- !u!114 &429177554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13710,6 +13710,26 @@ Prefab:
       value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 114552341007391294, guid: 85bdcfa266caac74c97527d664ea7c3a,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 81985247814747046, guid: 85bdcfa266caac74c97527d664ea7c3a,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 81180733491093310, guid: 85bdcfa266caac74c97527d664ea7c3a,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 81368398270809578, guid: 85bdcfa266caac74c97527d664ea7c3a,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 81936936540932788, guid: 85bdcfa266caac74c97527d664ea7c3a,
         type: 2}
       propertyPath: m_Enabled
       value: 1

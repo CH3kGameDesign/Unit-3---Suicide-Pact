@@ -204,8 +204,6 @@ public class CharacterSelect1 : MonoBehaviour {
 	//---------------------------------------------------------------------
 
 	public void changecharacter () {
-        GetComponent<CharacterSelectManager>().changecharacter();
-
         //Select Character
         if (charselect == 1) {
 			charSelectText.text = "Player 1";
@@ -231,8 +229,8 @@ public class CharacterSelect1 : MonoBehaviour {
             //Halves the viewport
             player4cam.GetComponentInChildren<Camera>().rect = new Rect(0, 0, 0.5f, 1);
         }
-
-	}
+        GetComponent<CharacterSelectManager>().changecharacter();
+    }
 
     //Disable Characters    FOR MENU
 	public void disablecharacters () {

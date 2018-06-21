@@ -204,34 +204,33 @@ public class CharacterSelect2 : MonoBehaviour {
 	//---------------------------------------------------------------------
 
 	public void changecharacter () {
-        GetComponent<CharacterSelectManager>().changecharacter();
         //Select Character
 		if (charselect == 1) {
-			charSelectText.text = "Player 1";
+			//charSelectText.text = "Player 1";
 
             //Halves the viewport
-            player1cam.GetComponentInChildren<Camera>().rect = new Rect(Screen.width/2, 0, 0.5f, 1);
+            player1cam.GetComponentInChildren<Camera>().rect = new Rect(0.5f, 0, 0.5f, 1);
 		}
 		if (charselect == 2) {
-			charSelectText.text = "Player 2";
+			//charSelectText.text = "Player 2";
 
             //Halves the viewport
-            player2cam.GetComponentInChildren<Camera>().rect = new Rect(Screen.width / 2, 0, 0.5f, 1);
+            player2cam.GetComponentInChildren<Camera>().rect = new Rect(0.5f, 0, 0.5f, 1);
         }
 		if (charselect == 3) {
-			charSelectText.text = "Player 3";
+			//charSelectText.text = "Player 3";
 
             //Halves the viewport
-            player3cam.GetComponentInChildren<Camera>().rect = new Rect(Screen.width / 2, 0, 0.5f, 1);
+            player3cam.GetComponentInChildren<Camera>().rect = new Rect(0.5f, 0, 0.5f, 1);
         }
 		if (charselect == 4) {
-			charSelectText.text = "Player 4";
+			//charSelectText.text = "Player 4";
 
             //Halves the viewport
-            player4cam.GetComponentInChildren<Camera>().rect = new Rect(Screen.width / 2, 0, 0.5f, 1);
+            player4cam.GetComponentInChildren<Camera>().rect = new Rect(0.5f, 0, 0.5f, 1);
         }
-
-	}
+        GetComponent<CharacterSelectManager>().changecharacter();
+    }
 
     //Disable Characters    FOR MENU
 	public void disablecharacters () {
